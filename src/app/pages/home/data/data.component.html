@@ -1,9 +1,18 @@
-<div style="display: flex; flex-direction: column">
+<div class="row mt-4 border-top">
   <h3>Data page</h3>
-  
-  <div>
-    <h3 id="counter">{{ counter }}</h3>
-    <button id="increment" (click)="increment()">INCREMENT</button>
-    <button id="decrement" (click)="decrement()">DECREMENT</button>
+
+  <div class="col-12">
+    <div class="col-1">
+      <h3 class="border text-center" id="counter">{{ counter }}</h3>
+    </div>
+
+    <div class="col-12">
+      <button mat-raised-button color="warn" id="increment" (click)="increment()">
+        INCREMENT
+      </button>
+      <button mat-raised-button class="mx-4" color="primary" id="decrement" (click)="decrement()">
+        DECREMENT
+      </button>
+    </div>
   </div>
 </div>
