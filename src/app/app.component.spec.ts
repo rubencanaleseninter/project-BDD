@@ -1,11 +1,18 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { Reducer } from './pages/home/home.reducer';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
+      imports: [
+        RouterTestingModule,
+        StoreModule.forRoot({ count: Reducer }),
+        StoreDevtoolsModule.instrument({ maxAge: 10 }),
+      ],
       declarations: [AppComponent],
     }).compileComponents();
   });

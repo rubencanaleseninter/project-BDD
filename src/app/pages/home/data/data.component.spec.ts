@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { DataComponent } from './data.component';
 
 describe('DataComponent', () => {
@@ -24,6 +23,8 @@ describe('DataComponent', () => {
 
   it(`should have as counter 0'`, () => {
     const data = fixture.componentInstance;
-    expect(data.counter).toEqual(0);
+    data.count$.subscribe((res) => {
+      expect(res).toEqual(0);
+    });
   });
 });

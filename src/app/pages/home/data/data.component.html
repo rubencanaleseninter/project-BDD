@@ -3,16 +3,15 @@
 
   <div class="col-12">
     <div class="col-1">
-      <h3 class="border text-center" id="counter">{{ counter }}</h3>
+      <h3 class="border text-center" id="counter">{{ count$ | async }}</h3>
     </div>
 
     <div class="col-12">
-      <button mat-raised-button color="warn" id="increment" (click)="increment()">
-        INCREMENT
-      </button>
+      <button mat-raised-button color="warn" id="increment" (click)="increment()">INCREMENT</button>
       <button mat-raised-button class="mx-4" color="primary" id="decrement" (click)="decrement()">
         DECREMENT
       </button>
+      <button mat-raised-button color="basic" id="reset" (click)="reset()">RESET</button>
     </div>
   </div>
 </div>
