@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { StoreModule } from '@ngrx/store';
+import { Reducer } from '../home.reducer';
 import { DataComponent } from './data.component';
 
 describe('DataComponent', () => {
@@ -8,6 +10,7 @@ describe('DataComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [DataComponent],
+      imports: [StoreModule.forRoot({ count: Reducer })]
     }).compileComponents();
   });
 
