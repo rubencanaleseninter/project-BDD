@@ -1,5 +1,5 @@
 // @ts-ignore
-import { Then, When, And } from 'cucumber';
+import { Then, When } from 'cucumber';
 import { element, by } from 'protractor';
 import { expect } from 'chai';
 

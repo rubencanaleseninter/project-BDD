@@ -6,7 +6,7 @@ Feature: data
         When I click on the increment button 50 times
         Then The counter should show "50"
 
-    Scenario: Basic increment counter
+    Scenario: Basic decrement counter
         When I click on the decrement button 50 times
         Then The counter should shows "0"
 
