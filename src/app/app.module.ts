@@ -3,12 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeRoutingModule } from './pages/home/home-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { StoreModule } from '@ngrx/store';
-import { Reducer } from 'src/app/pages/home/home.reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { counterReducer } from './modules/home/pages/counter/counter.reducer';
+import { HomeRoutingModule } from './modules/home/home-routing.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,7 +18,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     HomeRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    StoreModule.forRoot({ count: Reducer }),
+    StoreModule.forRoot({ count: counterReducer }),
     StoreDevtoolsModule.instrument({ maxAge: 10 }),
   ],
   providers: [],

@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { increment, decrement, reset } from '../home.actions';
+import { increment, decrement, reset } from './counter.actions';
 
 @Component({
-  templateUrl: './data.component.html',
-  styleUrls: ['./data.component.scss'],
+  templateUrl: './counter.component.html',
+  styleUrls: ['./counter.component.scss'],
 })
-export class DataComponent {
+export class counterComponent {
   count$: Observable<number>;
 
   constructor(private store: Store<{ count: number }>) {

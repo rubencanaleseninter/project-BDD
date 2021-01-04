@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DataComponent } from './data/data.component';
-import { HomeComponent } from './home.component';
+import { counterComponent } from './pages/counter/counter.component';
+import { HomeComponent } from './pages/home.component';
 
 export const routes: Routes = [
   {
@@ -14,8 +14,8 @@ export const routes: Routes = [
     component: HomeComponent,
     children: [
       {
-        path: 'data',
-        component: DataComponent,
+        path: 'counter',
+        component: counterComponent,
       },
     ],
   },

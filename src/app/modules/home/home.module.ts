@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
-import { DataComponent } from './data/data.component';
 import { HomeRoutingModule } from './home-routing.module';
-import { HomeComponent } from './home.component';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
+import { counterComponent } from './pages/counter/counter.component';
+import { HomeComponent } from './pages/home.component';
 
 @NgModule({
-  declarations: [HomeComponent, DataComponent],
+  declarations: [HomeComponent, counterComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,

@@ -24,7 +24,7 @@ exports.config = {
     require: [
       './src/steps/*.ts', // accepts a glob
     ],
-    tags: '(@appFeature or @dataFeature)',
+    tags: '(@appFeature or @counterFeature)',
   },
 
   allScriptsTimeout: 11000,

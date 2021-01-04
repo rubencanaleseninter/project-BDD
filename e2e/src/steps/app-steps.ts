@@ -16,7 +16,7 @@ Given('I am on the {string} page', async (x: string) => {
 
 When('I click the {string} button', async (url: string) => {
   await page.waitForUrlToChangeTo(browser.baseUrl + url);
-  await page.clickButton('#data');
+  await page.clickButton('#counter');
 });
 
 Then('I go to the {string} page', async (url: string) => {

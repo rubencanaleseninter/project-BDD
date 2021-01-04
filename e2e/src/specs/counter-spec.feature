@@ -1,5 +1,5 @@
-@dataFeature
-Feature: data
+@counterFeature
+Feature: counter
     This feature lets a user increment, decrement and reset the counter by clicking on the button.
 
     Scenario: Basic increment counter

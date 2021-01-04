@@ -1,21 +1,21 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { StoreModule } from '@ngrx/store';
-import { Reducer } from '../home.reducer';
-import { DataComponent } from './data.component';
+import { counterReducer } from './counter.reducer';
+import { counterComponent } from './counter.component';
 
-describe('DataComponent', () => {
-  let component: DataComponent;
-  let fixture: ComponentFixture<DataComponent>;
+describe('counterComponent', () => {
+  let component: counterComponent;
+  let fixture: ComponentFixture<counterComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [DataComponent],
-      imports: [StoreModule.forRoot({ count: Reducer })]
+      declarations: [counterComponent],
+      imports: [StoreModule.forRoot({ count: counterReducer })],
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DataComponent);
+    fixture = TestBed.createComponent(counterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -25,8 +25,8 @@ describe('DataComponent', () => {
   });
 
   it(`should have as counter 0'`, () => {
-    const data = fixture.componentInstance;
-    data.count$.subscribe((res) => {
+    const counter = fixture.componentInstance;
+    counter.count$.subscribe((res) => {
       expect(res).toEqual(0);
     });
   });
