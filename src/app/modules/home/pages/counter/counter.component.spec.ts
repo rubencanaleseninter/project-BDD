@@ -30,4 +30,24 @@ describe('CounterComponent', () => {
       expect(res).toEqual(0);
     });
   });
+
+  it('should have a increment button', () => {
+    const btn = fixture.debugElement.nativeElement.querySelector('#increment');
+    expect(btn).toBeTruthy();
+  });
+
+  it('should have a decrement button', () => {
+    const btn = fixture.debugElement.nativeElement.querySelector('#decrement');
+    expect(btn).toBeTruthy();
+  });
+
+  it('should have a reset button', () => {
+    const btn = fixture.debugElement.nativeElement.querySelector('#reset');
+    expect(btn).toBeTruthy();
+  });
+
+  it('should have a random button', () => {
+    const btn = fixture.debugElement.nativeElement.querySelector('#random');
+    expect(btn).toBeTruthy();
+  });
 });
