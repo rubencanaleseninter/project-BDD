@@ -17,7 +17,7 @@ When('I click on the increment button {string} times', async (x: number) => {
 });
 
 Then('The counter should show, {string}', async (x: string) => {
-  expect(await element(by.id('counter')).getText()).to.equal(x);
+  expect(await element(by.id('counter-value')).getText()).to.equal(x);
 });
 
 When('I click on the decrement button {string} times', async (x: number) => {
@@ -27,7 +27,7 @@ When('I click on the decrement button {string} times', async (x: number) => {
 });
 
 Then('The counter should show. {string}', async (x: string) => {
-  const counter = page.getText('#counter');
+  const counter = page.getText('#counter-value');
   expect(await counter).to.equal(x);
 });
 
@@ -36,7 +36,7 @@ When('I click on the reset button', async () => {
 });
 
 Then('The counter should show; {string}', async (x: string) => {
-  const counter = page.getText('#counter');
+  const counter = page.getText('#counter-value');
   expect(await counter).to.equal(x);
 });
 
@@ -44,7 +44,7 @@ When('I click on the random button', async () => {
   await page.clickButton('#random');
 });
 
-Then('The counter should show result', async () => {
-  const counter = page.getText('#counter');
-  expect(await counter).to.not.equal(0);
+Then('The counter should not show result {string}', async (x: string) => {
+  const counter = page.getText('#counter-value');
+  expect(await counter).to.not.equal(x);
 });

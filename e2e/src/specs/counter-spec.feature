@@ -16,5 +16,5 @@ Feature: counter
 
     Scenario: Basic random counter
         When I click on the random button
-        Then The counter should show result
+        Then The counter should not show result "0"
 
