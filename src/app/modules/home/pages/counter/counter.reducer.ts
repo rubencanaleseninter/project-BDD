@@ -5,8 +5,8 @@ export const initialState = 0;
 
 const reducer = createReducer(
   initialState,
-  on(increment, (state) => state + 1),
-  on(decrement, (state) => state - 1),
+  on(increment, (state: number) => state + 1),
+  on(decrement, (state: number) => state - 1),
   on(reset, (state) => 0),
   on(random, (state) => Math.floor(Math.random() * 100)),
   on(jump, (state, { num }) => num)

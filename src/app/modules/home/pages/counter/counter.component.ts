@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { increment, decrement, reset } from './counter.actions';
+import { increment, decrement, reset, random, jump } from './counter.actions';
 
 @Component({
   templateUrl: './counter.component.html',
   styleUrls: ['./counter.component.scss'],
 })
-export class counterComponent {
+export class CounterComponent {
   count$: Observable<number>;
 
   constructor(private store: Store<{ count: number }>) {
@@ -24,5 +24,13 @@ export class counterComponent {
 
   reset(): void {
     this.store.dispatch(reset());
+  }
+
+  random(): void {
+    this.store.dispatch(random());
+  }
+
+  jump(): void {
+    this.store.dispatch(jump({ num: 10 }));
   }
 }

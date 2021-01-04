@@ -1,21 +1,21 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './counter.reducer';
-import { counterComponent } from './counter.component';
+import { CounterComponent } from './counter.component';
 
-describe('counterComponent', () => {
-  let component: counterComponent;
-  let fixture: ComponentFixture<counterComponent>;
+describe('CounterComponent', () => {
+  let component: CounterComponent;
+  let fixture: ComponentFixture<CounterComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [counterComponent],
+      declarations: [CounterComponent],
       imports: [StoreModule.forRoot({ count: counterReducer })],
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(counterComponent);
+    fixture = TestBed.createComponent(CounterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

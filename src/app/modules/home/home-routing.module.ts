@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { counterComponent } from './pages/counter/counter.component';
+import { CounterComponent } from './pages/counter/counter.component';
 import { HomeComponent } from './pages/home.component';
 
 export const routes: Routes = [
@@ -15,7 +15,7 @@ export const routes: Routes = [
     children: [
       {
         path: 'counter',
-        component: counterComponent,
+        component: CounterComponent,
       },
     ],
   },
